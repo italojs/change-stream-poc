@@ -2,6 +2,11 @@
 
 A **Meteor.js** application demonstrating real-time MongoDB Change Streams functionality with a React-based user interface. This project showcases how to monitor database changes in real-time and display them in a visually appealing, color-coded table.
 
+
+https://github.com/user-attachments/assets/968519fe-3ec7-40c4-9e9d-832c9dd58ed1
+
+
+
 ## 🚀 Features
 
 - **Real-time Change Stream Monitoring**: Watch MongoDB collection changes as they happen
