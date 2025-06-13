@@ -1,5 +1,5 @@
 {
-  "name": "change-streams-poc",
+  "name": "meteor-app",
   "private": true,
   "scripts": {
     "start": "meteor run",
@@ -8,19 +8,16 @@
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
   "dependencies": {
-    "@babel/runtime": "^7.23.5",
-    "meteor-node-stubs": "^1.2.12",
-    "mongodb": "^6.17.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-json-view": "^1.21.3"
+    "@babel/runtime": "^7.27.6",
+    "meteor-node-stubs": "^1.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "meteor": {
     "mainModule": {
       "client": "client/main.jsx",
       "server": "server/main.js"
     },
-    "testModule": "tests/main.js",
-    "modern": true
+    "testModule": "tests/main.js"
   }
 }
