@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-REPLSET_NAME="${1:-rs0}"  # usa "rs0" por padrão se nenhum argumento for passado
+REPLSET_NAME="${1:-rs0}"  # uses "rs0" by default if no argument is passed
 
 MONGOD_BIN="$HOME/.meteor/packages/meteor-tool/.3.3.0-rc.0.98m07w5jwdt++os.osx.arm64+web.browser+web.browser.legacy+web.cordova/mt-os.osx.arm64/dev_bundle/mongodb/bin/mongod"
 DATA_DIR="./mongo-replica"

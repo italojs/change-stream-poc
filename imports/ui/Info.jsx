@@ -11,11 +11,11 @@ export const Info = () => {
     };
   }, []);
 
-  // Estado para armazenar eventos do change stream
+  // State to store change stream events
   const [streamEvents, setStreamEvents] = useState([]);
 
   useEffect(() => {
-    // Assina o stream de changes
+    // Subscribe to the change stream
     const sub = Meteor.subscribeStream('streamLinks');
     sub.onData((data) => {
       setStreamEvents(evts => [data, ...evts]);
