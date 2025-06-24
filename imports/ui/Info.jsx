@@ -11,18 +11,6 @@ export const Info = () => {
     };
   }, []);
 
-  // State to store change stream events
-  const [streamEvents, setStreamEvents] = useState([]);
-
-  useEffect(() => {
-    // Subscribe to the change stream
-    const sub = Meteor.subscribeStream('streamLinks');
-    sub.onData((data) => {
-      setStreamEvents(evts => [data, ...evts]);
-    });
-    return () => sub.stop();
-  }, []);
-
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -32,9 +20,11 @@ export const Info = () => {
       <h2>Learn Meteor!</h2>
       <h3>Change Stream Events</h3>
       <ul>
-        {streamEvents.map((evt, idx) => (
-          <li key={idx}>
-            <pre style={{fontSize: '0.8em', background: '#f6f6f6', padding: 8}}>{JSON.stringify(evt, null, 2)}</pre>
+        {links.map((link) => (
+          <li key={link._id}>
+            <a href={link.url} target="_blank" rel="noopener noreferrer">
+              {link.title}
+            </a>
           </li>
         ))}
       </ul>
